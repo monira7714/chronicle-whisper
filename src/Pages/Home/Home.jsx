@@ -1,8 +1,12 @@
+import NavBar from "../../shared/NavBar/NavBar";
+import 'rsuite/dist/rsuite.min.css';
+
+
 
 const Home = () => {
     return (
         <div>
-            this is home
+            <NavBar></NavBar>
         </div>
     );
 };
