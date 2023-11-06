@@ -57,16 +57,16 @@ const NavBar = () => {
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 space-y-4 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {navLinks}
                             {
                                 user ?
-                                    <div className="">
+                                    <div className="space-y-4 ml-4 ">
                                         <img className="btn btn-ghost btn-circle avatar mr-2" src={auth.currentUser.photoURL} />
-                                        <h1 className="mr-2">{auth.currentUser.displayName}</h1>
-                                        <button onClick={handleLogOut} className="btn bg-[#ae4e81cf] text-white">Sign Out</button></div>
+                                        <h1 className="mr-2 text-2xl">{auth.currentUser.displayName}</h1>
+                                        <button onClick={handleLogOut} className="btn bg-[#ae4e81cf] text-white mb-2">Sign Out</button></div>
                                     : <Link to='/login'>
-                                        <button className="btn">Login</button>
+                                        <button className="btn mb-2">Login</button>
                                     </Link>
                             }
                         </ul>

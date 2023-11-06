@@ -1,0 +1,30 @@
+.background {
+    background-image: url('https://i.ibb.co/HdGpL3w/design-space-decorated-with-leaves-website-banner-template.jpg');
+    background-size: 100vw 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .background {
+        background-image: url('https://i.ibb.co/qWJNNmv/Design-space-decorated-with-leaves-3001.jpg');
+        background-size: 100vw 100vh;
+        background-position: center center;
+        object-fit: cover;
+
+    }
+}
+
+/* https://i.ibb.co/qWJNNmv/Design-space-decorated-with-leaves-3001.jpg */
+/* https://i.ibb.co/0XyW5FP/Wepik-export-202311060625041-100.jpg */
+@media (max-width: 425px) {
+    .background {
+        background-image: url('https://i.ibb.co/0XyW5FP/Wepik-export-202311060625041-100.jpg');
+        background-size: 100vw 100vh;
+        background-position: center center;
+        object-fit: cover;
+
+    }
+}
