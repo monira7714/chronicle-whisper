@@ -25,25 +25,25 @@ const NavBar = () => {
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",
-                color: isActive ? "red"  : "black",
+                color: isActive ? "red" : "black",
             };
         }} to='/profile'>Add Blog</NavLink></li>
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",
-                color: isActive ? "red"  : "black",
+                color: isActive ? "red" : "black",
             };
         }} to='/blog'>All Blogs</NavLink></li>
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",
-                color: isActive ? "red"  : "black",
+                color: isActive ? "red" : "black",
             };
         }} to='/blog'>Featured Blogs</NavLink></li>
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",
-                color: isActive ? "red"  : "black",
+                color: isActive ? "red" : "black",
             };
         }} to='/blog'>Wishlist</NavLink></li>
 
@@ -89,9 +89,10 @@ const NavBar = () => {
                                 <img className="btn btn-ghost btn-circle avatar mr-2" src={auth.currentUser.photoURL} />
                                 <h1 className="mr-2 text-lg text-orange-500 capitalize">{auth.currentUser.displayName}</h1>
                                 <button onClick={handleLogOut} className="btn bg-orange-500 text-white">Sign Out</button></div>
-                            : <Link to='/login'>
-                                <button className="btn">Login</button>
-                            </Link>
+                            : <div className="flex gap-2">
+                                <Link to='/login'><button className="btn bg-orange-500 text-white">Login</button></Link>
+                                <Link to='/register'><button className="btn bg-orange-500 text-white">Register</button></Link>
+                            </div>
                     }
 
                 </div>
