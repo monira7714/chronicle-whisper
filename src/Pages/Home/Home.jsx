@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner/Banner";
 import Newsletter from "../../components/Newsletter/Newsletter";
+import RecentBlogs from "../../components/RecentBlogs/RecentBlogs";
 import Tags from "../../components/Tags/Tags";
 import Footer from "../../shared/Footer/Footer";
 import NavBar from "../../shared/NavBar/NavBar";
@@ -12,8 +13,9 @@ const Home = () => {
         <div>
             <NavBar></NavBar>
             <Banner></Banner>
-            <Newsletter></Newsletter>
+            <RecentBlogs></RecentBlogs>
             <Tags></Tags>
+            <Newsletter></Newsletter>
             <Footer></Footer>
         </div>
     );

@@ -27,25 +27,25 @@ const NavBar = () => {
                 textDecoration: isActive ? "underline" : "",
                 color: isActive ? "red" : "black",
             };
-        }} to='/profile'>Add Blog</NavLink></li>
+        }} to='/addBlog'>Add Blog</NavLink></li>
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",
                 color: isActive ? "red" : "black",
             };
-        }} to='/blog'>All Blogs</NavLink></li>
+        }} to='/allBlogs'>All Blogs</NavLink></li>
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",
                 color: isActive ? "red" : "black",
             };
-        }} to='/blog'>Featured Blogs</NavLink></li>
+        }} to='/featured'>Featured Blogs</NavLink></li>
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",
                 color: isActive ? "red" : "black",
             };
-        }} to='/blog'>Wishlist</NavLink></li>
+        }} to='/wishlist'>Wishlist</NavLink></li>
 
     </>
 
