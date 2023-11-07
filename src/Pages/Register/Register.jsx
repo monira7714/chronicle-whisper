@@ -4,6 +4,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { getAuth, updateProfile } from "firebase/auth";
 import Swal from 'sweetalert2'
 import NavBar from "../../shared/NavBar/NavBar";
+import Footer from "../../shared/Footer/Footer";
 
 
 const Register = () => {
@@ -156,6 +157,7 @@ const Register = () => {
                     <button onClick={handleGoogle} className="btn-link ml-2"><img className="w-[50px] h-[50px]" src="https://i.ibb.co/GQnMLC9/google.png" alt="Google" /></button>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

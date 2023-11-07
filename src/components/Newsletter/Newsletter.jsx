@@ -3,7 +3,8 @@ import Swal from 'sweetalert2'
 
 const Newsletter = () => {
 
-    const handleSubscribe = () => {
+    const handleSubscribe = (e) => {
+        e.preventDefault()
         // console.log('success');
         Swal.fire({
             icon: 'success',
@@ -20,12 +21,12 @@ const Newsletter = () => {
                     <h2 className="text-3xl lg:text-5xl tracking-widest font-medium mb-2">Newsletter</h2>
                     <p className="tracking-wide lg:text-lg text-sm">Subscribe to our new posts</p>
                 </div>
-                <div className="flex relative w-2/3 md:pl-20 pl-0">
-                    <input className="md:px-6 px-4 md:py-5 py-3 md:w-2/3 w-full rounded-full md:text-lg text-sm" type="email" name='email' placeholder="Enter Your Email Address" />
-                    <button onClick={handleSubscribe} className="flex items-center lg:px-12 md:px-6 px-3 md:py-5 py-3 md:text-xl font-semibold rounded-full bg-black text-white absolute lg:right-40 md:right-10 -right-2">
-                        <span className='mr-4'>Sign Up</span><FaPaperPlane></FaPaperPlane>
+                <form onSubmit={handleSubscribe} className="flex relative w-2/3 md:pl-20 pl-0">
+                    <input className="md:px-6 px-4 md:py-5 py-3 md:w-2/3 w-full rounded-full md:text-lg text-sm" type="email" name='email' placeholder="Enter Your Email Address" required/>
+                    <button className="flex items-center lg:px-12 md:px-6 px-3 md:py-5 py-3 md:text-xl font-semibold rounded-full bg-black text-white absolute lg:right-40 md:right-10 -right-2">
+                        <input className='mr-2' type="submit" value="Sign Up"/><FaPaperPlane></FaPaperPlane>
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     );

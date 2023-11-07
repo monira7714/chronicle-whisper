@@ -1,5 +1,7 @@
 import Banner from "../../components/Banner/Banner";
 import Newsletter from "../../components/Newsletter/Newsletter";
+import Tags from "../../components/Tags/Tags";
+import Footer from "../../shared/Footer/Footer";
 import NavBar from "../../shared/NavBar/NavBar";
 import 'rsuite/dist/rsuite.min.css';
 
@@ -11,6 +13,8 @@ const Home = () => {
             <NavBar></NavBar>
             <Banner></Banner>
             <Newsletter></Newsletter>
+            <Tags></Tags>
+            <Footer></Footer>
         </div>
     );
 };

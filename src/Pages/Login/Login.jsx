@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Swal from 'sweetalert2'
 import NavBar from "../../shared/NavBar/NavBar";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Footer from "../../shared/Footer/Footer";
 
 const Login = () => {
 
@@ -95,6 +96,7 @@ const Login = () => {
                     <button onClick={handleGoogle} className="btn-link ml-2"><img className="w-[50px] h-[50px]" src="https://i.ibb.co/GQnMLC9/google.png" alt="Google"/></button>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
