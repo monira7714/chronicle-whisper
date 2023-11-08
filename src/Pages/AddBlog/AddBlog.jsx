@@ -1,7 +1,13 @@
 import Swal from "sweetalert2";
 import NavBar from "../../shared/NavBar/NavBar";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const AddBlog = () => {
+    const {user} = useContext(AuthContext)
+    // console.log(user.metadata.creationTime);
+    const navigate = useNavigate();
 
     const handleAddBlog = e => {
         e.preventDefault();
@@ -11,10 +17,11 @@ const AddBlog = () => {
         const category = form.category.value;
         const shortDes = form.shortDes.value;
         const longDes = form.longDes.value;
-        const newBlog = { title, photo, category, shortDes, longDes }
-        console.log(form, newBlog);
-
-
+        const creationTime = user.metadata.creationTime;
+        const createdAt = user.metadata.createdAt;
+        const creator = user.email;
+        const newBlog = { title, photo, category, shortDes, longDes, creationTime, createdAt, creator}
+        console.log( newBlog);
 
         fetch('http://localhost:5000/blogs', {
             method: "POST",
@@ -30,12 +37,11 @@ const AddBlog = () => {
                         text: 'Blog added successfully!',
                         icon: 'success',
                         confirmButtonText: 'Done',
-
                     })
+                    navigate('/allBlogs')
                 }
             })
     }
-
 
     return (
         <div>
@@ -97,7 +103,7 @@ const AddBlog = () => {
                     </div>
                     <div className="text-center ">
                         <button className="mt-8">
-                            <input type="submit" value="Add Blog" className="btn btn-block bg-orange-400" />
+                            <input type="submit" value="Add Blog" className="btn btn-block bg-orange-400 text-white" />
                         </button>
                     </div>
                 </form>

@@ -1,3 +1,4 @@
+// import { motion } from "framer-motion"
 
 const Tags = () => {
 
@@ -35,7 +36,6 @@ const Tags = () => {
                             </svg>
                         </a>
                     </div>
-
                     <div className="p-6 flex items-center gap-4 bg-white rounded-xl">
                         <img className="w-[64px] h-[64px] rounded-full" src="https://i.ibb.co/m6VR3Mh/adi-goldstein-EUs-Vw-EOsbl-E-unsplash.jpg" alt="" />
                         <div>
@@ -93,3 +93,13 @@ const Tags = () => {
 };
 
 export default Tags;
+
+{/* <motion.div
+                initial={{ scale: 0 }}
+                animate={{ rotate: 180, scale: 1 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20
+                }}
+            /> */}

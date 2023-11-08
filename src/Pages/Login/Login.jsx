@@ -51,7 +51,7 @@ const Login = () => {
                 Swal.fire({
                     icon: 'success',
                     title: 'Congratulations',
-                    text: 'You have registered successfully',
+                    text: 'You have Logged in successfully',
                 })
                 navigate(location?.state ? location.state : '/')
 

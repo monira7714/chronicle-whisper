@@ -4,7 +4,10 @@ import Home from "../Pages/Home/Home";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import ErrorPage from "../components/Errorpage/ErrorPage";
-import AddBlog from "../Pages/Add Blog/AddBlog";
+import PrivateRouter from "./PrivateRouter";
+import AddBlog from './../Pages/AddBlog/AddBlog';
+import AllBlogs from "../Pages/AllBlogs/AllBlogs";
+import BlogDetail from "../Pages/BlogDetail/BlogDetail";
 
 const router = createBrowserRouter([
     {
@@ -26,8 +29,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addBlog',
-                element: <AddBlog></AddBlog>
-            }
+                element: <PrivateRouter><AddBlog></AddBlog></PrivateRouter>
+            },
+            {
+                path: '/allBlogs',
+                element: <PrivateRouter><AllBlogs></AllBlogs></PrivateRouter>
+            },
+            {
+                path: '/blogDetail/:id',
+                element: <PrivateRouter><BlogDetail></BlogDetail></PrivateRouter>
+            },
         ]
     },
 ]);
