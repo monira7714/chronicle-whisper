@@ -39,7 +39,7 @@ const NavBar = () => {
                 textDecoration: isActive ? "underline" : "",
                 color: isActive ? "red" : "black",
             };
-        }} to='/featured'>Featured Blogs</NavLink></li>
+        }} to='/featuredBlogs'>Featured Blogs</NavLink></li>
         <li className="text-lg"><NavLink style={({ isActive }) => {
             return {
                 textDecoration: isActive ? "underline" : "",

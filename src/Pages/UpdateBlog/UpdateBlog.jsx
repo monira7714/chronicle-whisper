@@ -41,7 +41,9 @@ const UpdateBlog = () => {
         const creationTime = user.metadata.creationTime;
         const createdAt = user.metadata.createdAt;
         const creator = user.email;
-        const updatedBlog = {title, photo, category, shortDes, longDes, creationTime, createdAt, creator};
+        const creatorName = user.displayName;
+        const creatorPhoto = user.photoURL;
+        const updatedBlog = {title, photo, category, shortDes, longDes, creationTime, createdAt, creator, creatorName, creatorPhoto};
         console.log(updatedBlog);
 
         fetch(`http://localhost:5000/blogs/${ID}`, {

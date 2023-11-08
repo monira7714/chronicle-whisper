@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const AddBlog = () => {
     const {user} = useContext(AuthContext)
-    // console.log(user.metadata.creationTime);
+    console.log(user);
     const navigate = useNavigate();
 
     const handleAddBlog = e => {
@@ -20,7 +20,9 @@ const AddBlog = () => {
         const creationTime = user.metadata.creationTime;
         const createdAt = user.metadata.createdAt;
         const creator = user.email;
-        const newBlog = { title, photo, category, shortDes, longDes, creationTime, createdAt, creator}
+        const creatorName = user.displayName;
+        const creatorPhoto = user.photoURL;
+        const newBlog = { title, photo, category, shortDes, longDes, creationTime, createdAt, creator, creatorName, creatorPhoto}
         console.log( newBlog);
 
         fetch('http://localhost:5000/blogs', {
