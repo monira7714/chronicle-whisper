@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { VscSend } from 'react-icons/vsc';
 import Swal from "sweetalert2";
+import CommentCard from "../../components/CommentCard/CommentCard";
 
 const BlogDetails = () => {
 
@@ -111,8 +112,9 @@ const BlogDetails = () => {
                 }
                 {/* comments */}
                 <div className="my-16 space-y-8 pt-12">
-                   
-
+                    {
+                        comments?.map(com => <CommentCard key={com._id} com={com} id={id}></CommentCard>)
+                    }
                 </div>
             </div>
         </div>
