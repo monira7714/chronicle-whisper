@@ -19,7 +19,7 @@ const AllBlogsCard = ({ blog }) => {
                 <span className="text-base font-semibold text-black">Posted On : {creationTime}</span>
             </label>
             <figure className="px-6">
-                <img src={photo} alt="Shoes" className="rounded-xl" />
+                <img src={photo} alt="Shoes" className="rounded-xl w-[250px] h-[200px]" />
             </figure>
             <div className="card-body p-6">
                 <h2 className="card-title text-2xl ">{title}</h2>

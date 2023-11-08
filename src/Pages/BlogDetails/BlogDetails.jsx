@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import NavBar from '../../shared/NavBar/NavBar';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { VscSend } from 'react-icons/vsc';
@@ -12,7 +12,6 @@ import CommentCard from "../../components/CommentCard/CommentCard";
 const BlogDetails = () => {
 
     const { user } = useContext(AuthContext);
-
     const { id } = useParams();
     // console.log(id);
 
@@ -39,16 +38,13 @@ const BlogDetails = () => {
         return <Skeleton count={10} />
     }
 
-    // const found = blogs.find(blog => blog._id === id)
     const found = blogs.find(blog => blog._id === id);
     console.log(found);
-
     const { title, photo, shortDes, longDes, creator } = found;
     // console.log(found);
 
     const handleComment = (e) => {
         // e.preventDefault();
-
         const comment = e.target.comment.value;
         e.target.comment.value = '';
         console.log('hi from comment', comment);
@@ -92,6 +88,11 @@ const BlogDetails = () => {
                     <h2 className="card-title text-2xl ">{title}</h2>
                     <p className='text-lg '>{shortDes}</p>
                     <p className='text-lg '>{longDes}</p>
+                </div>
+                <div className="text-center">
+                    {
+                        user?.email === creator ? <Link to={`/updateBlog/${id}`}><button className="btn bg-orange-500 text-white font-semibold">Update Blog</button></Link> : ''
+                    }
                 </div>
             </div>
             {/* comment section */}
