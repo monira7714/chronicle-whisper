@@ -1,20 +1,21 @@
 import DataTable from 'react-data-table-component';
 import PropTypes from 'prop-types'
 
-const FeaturedBlogTable = ({ blog }) => {
-    // const { title, creatorName, creatorPhoto } = blog;
-    const blogTitle = blog.title;
-    const blogOwner = blog.creatorName;
-    const blogOwnerPhoto = blog.creatorPhoto;
+const FeaturedBlogTable = ({ content }) => {
+    console.log(content);
+    const { blogTitle, blogOwner, blogOwnerPhoto } = content;
+    // const blogTitle = content.title;
+    // const blogOwner = content.creatorName;
+    // const blogOwnerPhoto = content.creatorPhoto;
     console.log(blogTitle, blogOwner, blogOwnerPhoto);
 
 
     const columns = [
-        {
-            name: 'Serial No',
-            selector: row => row.id,
+        // {
+        //     name: 'Serial No',
+        //     selector: row => row.id,
 
-        },
+        // },
         {
             name: 'Blog Title',
             selector: row => row.title,
@@ -29,15 +30,11 @@ const FeaturedBlogTable = ({ blog }) => {
         },
     ];
 
-    // const tableData = [
-
-    // ] 
-
     const data = [
         {
-            id: 1,
+            // id: {$},
             title: blogTitle,
-            owner: blogOwner,
+            owner:blogOwner,
             pic: blogOwnerPhoto
         }
     ]
@@ -53,7 +50,7 @@ const FeaturedBlogTable = ({ blog }) => {
 };
 
 FeaturedBlogTable.propTypes = {
-    blog: PropTypes.object
+    content: PropTypes.object
 }
 
 export default FeaturedBlogTable;

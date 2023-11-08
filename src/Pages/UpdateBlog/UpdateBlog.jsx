@@ -14,7 +14,7 @@ const UpdateBlog = () => {
     // const { isPending, data: blogs } = useQuery({
     //     queryKey: ['blogs'],
     //     queryFn: async () => {
-    //         const res = await fetch(`http://localhost:5000/blogs/${id}`);
+    //         const res = await fetch(`https://eleventh-assignment-server-nine.vercel.app/blogs/${id}`);
     //         return res.json()
     //     }
     // })
@@ -46,7 +46,7 @@ const UpdateBlog = () => {
         const updatedBlog = {title, photo, category, shortDes, longDes, creationTime, createdAt, creator, creatorName, creatorPhoto};
         console.log(updatedBlog);
 
-        fetch(`http://localhost:5000/blogs/${ID}`, {
+        fetch(`https://eleventh-assignment-server-nine.vercel.app/blogs/${ID}`, {
             method: "PUT",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updatedBlog),

@@ -7,7 +7,7 @@ const RecentBlogs = () => {
     const { isPending, data: blogs } = useQuery({
         queryKey: ['blogs'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/blogs');
+            const res = await fetch('https://eleventh-assignment-server-nine.vercel.app/blogs');
             return res.json()
         }
     })

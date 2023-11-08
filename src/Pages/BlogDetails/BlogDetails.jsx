@@ -18,7 +18,7 @@ const BlogDetails = () => {
     const { data: comments } = useQuery({
         queryKey: ['comments'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/comments');
+            const res = await fetch('https://eleventh-assignment-server-nine.vercel.app/comments');
             return res.json()
         }
     })
@@ -26,7 +26,7 @@ const BlogDetails = () => {
     const { isPending, data: blogs } = useQuery({
         queryKey: ['blogs'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/blogs');
+            const res = await fetch('https://eleventh-assignment-server-nine.vercel.app/blogs');
             return res.json()
         }
     })
@@ -55,7 +55,7 @@ const BlogDetails = () => {
         console.log(newComment);
 
         {/* storing comments on db*/ }
-        fetch('http://localhost:5000/comments', {
+        fetch('https://eleventh-assignment-server-nine.vercel.app/comments', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newComment),

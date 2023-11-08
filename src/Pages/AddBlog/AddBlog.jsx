@@ -25,7 +25,7 @@ const AddBlog = () => {
         const newBlog = { title, photo, category, shortDes, longDes, creationTime, createdAt, creator, creatorName, creatorPhoto}
         console.log( newBlog);
 
-        fetch('http://localhost:5000/blogs', {
+        fetch('https://eleventh-assignment-server-nine.vercel.app/blogs', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newBlog),
