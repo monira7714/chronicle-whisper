@@ -1,3 +1,4 @@
+import Authors from "../../components/Authors/Authors";
 import Banner from "../../components/Banner/Banner";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import RecentBlogs from "../../components/RecentBlogs/RecentBlogs";
@@ -15,6 +16,7 @@ const Home = () => {
             <Banner></Banner>
             <RecentBlogs></RecentBlogs>
             <Tags></Tags>
+            <Authors></Authors>
             <Newsletter></Newsletter>
             <Footer></Footer>
         </div>

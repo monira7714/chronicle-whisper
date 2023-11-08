@@ -4,6 +4,8 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import NavBar from "../../shared/NavBar/NavBar";
 import AllBlogsCard from "../../components/AllBlogsCard/AllBlogsCard";
 const AllBlogs = () => {
+
+
     const { isPending, data: blogs } = useQuery({
         queryKey: ['blogs'],
         queryFn: async () => {
@@ -12,8 +14,7 @@ const AllBlogs = () => {
         }
     })
 
-
-    // console.log(blogs);
+    console.log(blogs);
 
     if (isPending) {
         return <Skeleton count={15} />

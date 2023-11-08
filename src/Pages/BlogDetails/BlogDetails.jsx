@@ -73,7 +73,6 @@ const BlogDetails = () => {
                         text: 'Comment is done successfully!',
                         icon: 'success',
                         confirmButtonText: 'Done',
-
                     })
                 }
             })
@@ -101,7 +100,7 @@ const BlogDetails = () => {
                 <hr className="bg-[#464545] h-1" />
                 <h4>Write your comment here</h4>
                 {
-                    user.email === creator ? <><h3 className="pl-8 text-red-500">You cannot comment on your own blog!</h3></> :
+                    user?.email === creator ? <><h3 className="pl-8 text-red-500">You cannot comment on your own blog!</h3></> :
                         <form onSubmit={handleComment} className="flex items-center">
                             <textarea className="border-black border-2 textarea" name="comment" id="" cols="100" rows="3" required></textarea>
                             <button className="flex items-center gap-2 bg-orange-500 p-4 text-white rounded-r-lg text-2xl" >

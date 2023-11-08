@@ -4,7 +4,7 @@ const CommentCard = ({ com, id }) => {
 
     const { name, photo, comment } = com;
 
-    console.log(com);
+    // console.log(com);
 
     return (
         <div>
