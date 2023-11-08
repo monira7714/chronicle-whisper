@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react';
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const AllBlogsCard = ({ blog }) => {
     const { _id, title, photo, category, shortDes, creationTime } = blog;
@@ -25,7 +26,7 @@ const AllBlogsCard = ({ blog }) => {
                 <h6 className='bg-orange-500/20 text-orange-500 p-3 rounded w-fit'>Category : {category}</h6>
                 <p className='text-lg '>{shortDes}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn bg-orange-500 text-white">Details</button>
+                    <Link to={`/blogDetail/${_id}`}><button className="btn bg-orange-500 text-white">Details</button></Link>
                     <button onClick={handleLiked} className="btn bg-orange-500 text-white text-2xl">
                         {
                             isLiked ? <AiFillHeart></AiFillHeart> : <AiOutlineHeart></AiOutlineHeart>
